@@ -21,6 +21,7 @@ for file in source_files:
                 data = load_worksheet.cell(row = i, column = j).value
                 value_row.append(data)
         if value_row:
+            value_row.insert(0, file)
             target_worksheet.append(value_row)
 
 target_workbook.save(str(target_file))
